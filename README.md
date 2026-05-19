@@ -56,7 +56,7 @@ Traditional SIEM alerts often generate high volumes of false positives. This sys
 2. **Train the ML Model:**
    (Ensure some logs are present in Elasticsearch first, or use simulate_attacks.py)
    \\\ash
-   python ml/train_model.py
+   python ml/run_training.py
    \\\`n
 3. **Start the Backend API:**
    \\\ash
