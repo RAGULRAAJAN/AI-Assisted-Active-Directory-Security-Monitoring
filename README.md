@@ -34,34 +34,34 @@ Traditional SIEM alerts often generate high volumes of false positives. This sys
 
 ### Installation
 1. **Clone the repository:**
-   \\\ash
+  
    git clone https://github.com/RAGULRAAJAN/AI-Assisted-Active-Directory-Security-Monitoring.git
    cd AI-Assisted-Active-Directory-Security-Monitoring
-   \\\`n
+  
 2. **Set up environment variables:**
    Create a .env file in the root directory:
-   \\\env
+   
    GROQ_API_KEY=your_api_key_here
    ES_HOST=http://localhost:9200
-   \\\`n
+  
 3. **Install Python dependencies:**
-   \\\ash
+
    pip install -r requirements.txt
-   \\\`n
+  
 ### Running the System
 1. **Start the ELK Stack:**
-   \\\ash
+  
    docker-compose up -d
-   \\\`n
+   
 2. **Train the ML Model:**
    (Ensure some logs are present in Elasticsearch first, or use simulate_attacks.py)
-   \\\ash
+   
    python ml/run_training.py
-   \\\`n
+   
 3. **Start the Backend API:**
-   \\\ash
+  
    uvicorn backend.main:app --port 8000 --reload
-   \\\`n
+   
 4. **Access the Dashboard:**
    Open http://localhost:8000/dashboard in your browser.
 
